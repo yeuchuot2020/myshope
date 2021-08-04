@@ -1,0 +1,119 @@
+.header{
+    max-width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+
+    .container{
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 20px;
+        transition: all 0.35s ease;
+        display: block;
+        
+        a{
+            color: rgb(48, 116, 31);
+
+            &::before, &::after {
+                height: 14px;
+                width: 14px;
+                position: absolute;
+                content: '';
+                -webkit-transition: all 0.35s ease;
+                transition: all 0.35s ease;
+                opacity: 0;
+            }
+
+            &::before{
+                left: 60px;
+                top: 20px;
+                border-left: 3px solid #c0392b;
+                border-top: 3px solid #c0392b;
+                -webkit-transform: translate(100%, 50%);
+                transform: translate(100%, 50%);
+            }
+
+            &::after{
+                
+                left: 153px;
+                top: 5vh;  
+                border-right: 3px solid #c0392b;
+                border-bottom: 3px solid #c0392b;
+                -webkit-transform: translate(-100%, -50%);
+                transform: translate(-100%, -50%);
+            }
+            &:hover{
+                color:rgb(82, 8, 131);
+            }
+
+            &:hover::before, &:hover::after{
+                
+                -webkit-transform: translate(0%, 0%);
+                transform: translate(0%, 0%);
+                opacity: 1;
+            }
+
+        }
+    }
+
+    .main-menu{
+        display: flex;
+        font-weight: 500;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+
+        li ~ li {
+            margin:{
+                left: 30px;
+            }
+        }
+
+        a{
+            text-transform: uppercase;
+            transition: 0.35s ease;
+            border:{
+                top: 3px solid #ffff;
+                bottom: 3px solid #ffff;
+            }
+            
+
+            &.active{
+                color: rgb(128, 12, 12);
+            }
+
+            &:hover{
+                color: rgb(128, 12, 12);
+                border: {
+                    top: 3px solid #571351;
+                    bottom: 3px solid #571351;
+                    
+                }
+            }
+        }
+
+    }
+
+    .user-menu{
+        display: flex;
+
+        li ~ li {
+            margin:{
+                left: 10px;
+            }
+        }
+
+
+        .log{
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
